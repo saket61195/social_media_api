@@ -3,7 +3,11 @@ const express = require("express");
 const app = express();
 const FBAuth = require("./util/fbAuth");
 
-const { getAllscreams, postOneScream } = require("./handlers/screams");
+const {
+  getAllscreams,
+  postOneScream,
+  getScream,
+} = require("./handlers/screams");
 const {
   signup,
   login,
@@ -15,6 +19,7 @@ const {
 //Screams routes
 app.get("/screams", getAllscreams);
 app.post("/scream", FBAuth, postOneScream);
+app.get("/scream/:screamId", getScream);
 
 //users routes
 app.post("/signup", signup);
