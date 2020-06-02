@@ -1,1 +1,5 @@
-# social_media_react_app
+# social_media_api
+cd function
+
+npm install
+npm install --save busboy
